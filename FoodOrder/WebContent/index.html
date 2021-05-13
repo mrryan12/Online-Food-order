@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ryan's online Food Order</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+<link rel="stylesheet" href="./Resorces/css/Index.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="banner" id="index">
+		<div class="nav-bar">
+			<div class="nav-links">
+				<ul>
+					<button href=""><li>HOME</li></button>
+					<button  id="admin"><li>ADMIN</li></button>
+					<button><a href="UserLogin.html"><li>USER</li></a></button>
+				</ul>
+			</div>
+		</div>
+		<!-- Text -->
+
+		<div class="banner-title">
+			<h1>
+				Food <span>Doesn't have </br> a religion
+				</span>. It is a religion
+			</h1>
+			<button type="button" class="btn">EXPLORE</button>
+
+
+		</div>
+
+
+	
+	</div>
+	
+	<!--  Admin Login -------------- -->
+	
+	<div class="container" id="AdminLogin">
+		<div class="card">
+			<div class="inner-box">
+			<div class="card-front">
+				<h2>ADMIN LOGIN</h2>
+				<form name="myForm" action="./AdminLoginServlet" method="POST" onsubmit="return validateForm()">
+					<input type="text" class="input-box"
+						placeholder="username" name="uname" /> <input
+						type="password" class="input-box" placeholder="password"
+						name="password"/>
+					  <button type="submit" class="submit-btn">LogIn</button>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+   <! ----------JQueery -------------------->
+   
+     <script>
+    
+    $(document).ready(function(){
+            $('#AdminLogin').hide();
+            $('#index').show();      
+                      });
+        
+       $('#admin').click(function(){
+           $('#index').hide();
+           $('#AdminLogin').show();
+       });
+        
+     
+    </script>
+  
+</body>
+</html>

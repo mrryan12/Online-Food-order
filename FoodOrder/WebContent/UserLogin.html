@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User login and Registraion form</title>
+<link rel="stylesheet" href="./Resorces/css/Userlogin.css">
+<script>
+ function ValidateForm()
+ {
+	 var name = document.myForm.uname.value;
+	 var pwd = document.myForm.password.value;
+	 
+	 if(name == "")
+	 {
+		 alert ("username can't blank");
+		 return false;
+	 }else if(pwd == "")
+		 {
+		 alert ("password can't blank");
+		 return false;
+		 }
+ }
+</script>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="card">
+			<div class="inner-box" id="card">
+				<div class="card-front">
+					<h2>LOGIN</h2>
+					<form name="myForm" action="UserLoginServlet" method="POST" onsubmit="return ValidateForm()">
+						<input type="text" class="input-box"
+							placeholder="username " name="uname" /> <input
+							type="password" class="input-box" placeholder="password"
+							name="password"  />
+						<button type="submit" class="submit-btn">LogIn</button>
+						<input type="checkbox"><span>Remember me</span>
+					</form>
+					<button type="button" onclick="openRegister()"   class="btn">I'm New Here</button>
+				</div>
+				
+				
+				<div class="card-back">
+					<h2>REGISTER</h2>
+					<form action="RegisterServlet" method="POST">
+					    <input type="text" class="input-box"placeholder="Your name" name="name" required />
+						<input type="email" class="input-box" placeholder="Your email" name="email" required /> 
+						<input type="password" class="input-box" placeholder="password" name="password" required />
+						<input type="text" class="input-box" placeholder="Address" name="Address" required />
+						<button type="submit" class="submit-btn">Submit</button>
+						<input type="checkbox"><span>Remember me</span>
+					</form>
+					<button type="button" class="btn" onclick="openLogin()">I've an account</button>
+
+           		</div>
+			</div>
+		</div>
+
+	</div>
+
+
+<script >
+
+var card = document.getElementById("card");
+
+function openRegister()
+{
+	card.style.transform = "rotateY(-180deg)";
+	}
+	
+function openLogin()
+{
+	card.style.transform = "rotateY(0deg)";
+	}
+</script>
+
+</body>
+</html>

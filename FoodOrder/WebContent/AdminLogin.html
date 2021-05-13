@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Login</title>
+<link rel="stylesheet" href="./Resorces/css/AdminLogin.css">
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["uname"].value;
+  var y = document.myForm.password.value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }else if(y == ""){  
+	  alert("Password can't be blank'");  
+	  return false;  
+	  } 
+}
+</script>
+</head>
+<body>
+<!-- 
+	<div class="container">
+		<div class="card">
+			<div class="inner-box">
+			<div class="card-front">
+				<h2>ADMIN LOGIN</h2>
+				<form name="myForm" action="./AdminLoginServlet" method="POST" onsubmit="return validateForm()">
+					<input type="text" class="input-box"
+						placeholder="username" name="uname" /> <input
+						type="password" class="input-box" placeholder="password"
+						name="password"/>
+					  <button type="submit" class="submit-btn">LogIn</button>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div> -->
+</body>
+</html>

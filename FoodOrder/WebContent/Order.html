@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Order Page</title>
+<link rel="stylesheet" href="./Resorces/css/AdminLogin.css">
+
+
+<! -------------------->
+
+<script>  
+/* var request;  
+function sendInfo()  
+{  
+var v=document.vinform.food.value;  
+var url="index.jsp?val="+v;  
+  
+if(window.XMLHttpRequest){  
+request=new XMLHttpRequest();  
+}  
+else if(window.ActiveXObject){  
+request=new ActiveXObject("Microsoft.XMLHTTP");  
+}  
+  
+try{  
+request.onreadystatechange=getInfo;  
+request.open("GET",url,true);  
+request.send();  
+}catch(e){alert("Unable to connect to server");}  
+}  
+  
+function getInfo(){  
+if(request.readyState==4){  
+var val=request.responseText;  
+}  
+}   */
+
+
+function searchdata(a)
+{
+ var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function()
+{
+	document.getElementById("res").innerHTML= xmlhttp.responseText;
+	}
+	
+	xmlhttp.open("POST","index.jsp?q="+a,true);
+	xmlhttp.send();
+	
+	
+	}
+
+</script>  
+
+</head>
+<body>
+
+
+
+	<div class="container">
+		<div class="card">
+			<div class="inner-box">
+			<div class="card-front">
+				<h2>Order Food</h2>
+				<form action="OrderServlet" name="vinform" method="POST">
+					<input type="text" class="input-box"
+						placeholder="Food Name" name="food" required pattern="[A-Za-z\s]+" onkeyup="searchdata(this.value)"/> 
+						<input
+						type="text" class="input-box" placeholder="Quantity"
+						name="qty" required pattern="[0-9]+" />
+					  <button type="submit" class="submit-btn">Buy</button>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+  <div id=res></div>
+
+<!-- 
+<center>
+<form action="OrderServlet" method="POST">
+<table>
+<h1>Order page</h1>
+<tr><td>Enter the food name</td><td><input type="text" name="food" required pattern="[A-Za-z\s]+"/></td></tr>
+<tr><td>Enter the quantity of food</td><td><input type="text" name="qty" required pattern="[0-9]+"/></td></tr><br><br>
+<h2>You can order only one food at a time</h2>
+</table>
+<input type="submit" value="Buy"/>
+</form>
+</center> -->
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Edit item Details</title>
+<link rel="stylesheet" href="./Resorces/css/EditItem.css">
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="card">
+			<div class="inner-box">
+			<div class="card-front">
+				<h2>Edit Items</h2>
+				<form action="EditItemServlet" method="POST">
+					<input type="text" class="input-box" placeholder="Item Id" name="modifyitemid" required pattern="[0-9]+"/>
+					<input type="text" class="input-box" placeholder="Item Name" name="itemname" required pattern="[A-Za-z\s]+" /> 
+					<input type="text" class="input-box" placeholder="Item Type" name="itemtype" required pattern="[A-Za-z\s]+" />
+						<input type="text" class="input-box" placeholder="Item Price" name="itemprice" required pattern="[0-9]+"/>
+						 <input type="text" class="input-box" placeholder="Item Details" name="itemdetails" required pattern="[A-Za-z\s]+"/>
+						 <input	type="text" class="input-box" placeholder="Item Quantity" name="quantity" required pattern="[0-9]+" />
+					  <button type="submit" class="submit-btn">Edit Item</button>
+					  
+				   </form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+<!-- 
+
+<center>
+<form action="EditItemServlet" method="post">
+<table>
+<h1>Edit Items Details</h1>
+<tr><td>Item Id</td><td><input type="text" name="modifyitemid" required pattern="[0-9]+"/></td></tr>
+<tr><td>Item Name</td><td><input type="text" name="itemname" required  pattern="[A-Za-z\s]+"/></td></tr>
+<tr><td>Item Type</td><td><input type="text" name="itemtype" required  pattern="[A-Za-z\s]+"/></td></tr>
+<tr><td>Item Price</td><td><input type="text" name="itemprice" required pattern="[0-9]+"/></td></tr>
+<tr><td>Item Details</td><td><input type="text" name="itemdetails" required  pattern="[A-Za-z\s]+"/></td></tr>
+<tr><td>Item qyantity</td><td><input type="text" name="quantity" required pattern="[0-9]+"/></td></tr>
+</table>
+<button type="submit">Edit Item</button>
+</form>
+<br><br> <button><a  href="AdminDashboard.html">Back</a></button>
+</center> -->
+</body>
+</html>

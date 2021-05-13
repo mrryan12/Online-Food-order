@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+<form action="RegisterServlet" method="POST">
+<table>
+<h1>Welcome to User Registeration page</h1>
+<tr><td>Customer Name</td><td><input type="text" name="name" required pattern="[A-Za-z\s]+"/></td></tr>
+<tr><td>Customer Email</td><td><input type="text" name="email" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/></td></tr>
+<tr><td>Customer password</td><td><input type="password" name="password" required/></td></tr>
+<tr><td>Customer Address</td><td><input type="text" name="Address" required/></td></tr>
+</table>
+<button type="submit">Register</button>
+</form>
+
+</center>
+</body>
+</html>
